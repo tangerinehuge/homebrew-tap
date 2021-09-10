@@ -8,7 +8,7 @@ class BlessclientAT1 < Formula
   version "1.5.2"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
+  if OS.mac? && (Hardware::CPU.intel? || Hardware::CPU.arm?)
     url "https://github.com/chanzuckerberg/blessclient/releases/download/v1.5.2/blessclient_1.5.2_darwin_amd64.tar.gz"
     sha256 "4c4934e046dcaab561a9b87c67da08bd1378318b49246e22ccdc35943d358568"
   end
