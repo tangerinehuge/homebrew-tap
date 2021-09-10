@@ -9,7 +9,7 @@ class AwsOidc < Formula
   bottle :unneeded
 
   on_macos do
-    if Hardware::CPU.intel?
+    if Hardware::CPU.intel? || Hardware::CPU.arm?
       url "https://github.com/chanzuckerberg/aws-oidc/releases/download/v0.24.1/aws-oidc_0.24.1_darwin_amd64.tar.gz"
       sha256 "e7463d261a74f391e4fe4a3aa95009389880d941ee142481eb664fda24304ae6"
     end
